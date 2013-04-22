@@ -3,10 +3,11 @@ var prefabPart : ParticleSystem;
 var bullet = GameObject;
 var forwardForce = 1000;
 var upwardForce = 0;
-
 var instanceBullet : GameObject;
+
 function Update()
 {
+	
 	if (Input.GetButtonDown("Fire1"))
 	{
 	
@@ -31,12 +32,10 @@ function Update()
 		
 		instanceBullet.renderer.material.color = newColor;
 		
-		
 		instanceBullet.rigidbody.AddForce(directionVector * 
 		forwardForce + upVec);
 				
 		instanceBullet.particleSystem.startColor = instanceBullet.light.color;
-		
 	}
 }
 
