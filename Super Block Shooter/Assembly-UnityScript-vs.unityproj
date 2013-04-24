@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_0;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -49,13 +49,19 @@
      <Compile Include="Assets\Bullet\bulletScript.js" />
      <Compile Include="Assets\Bullet\deleteBullet.js" />
      <Compile Include="Assets\Bullet\explosion.js" />
+     <Compile Include="Assets\Enemies\Win!.js" />
      <Compile Include="Assets\Enemies\enemy.js" />
      <Compile Include="Assets\Graphics\Crosshair\crosshair.js" />
      <Compile Include="Assets\Graphics\Edge Colouring\EdgeDetectEffectNormals.js" />
      <Compile Include="Assets\Graphics\Motion Blur\CameraMotionBlur.js" />
      <Compile Include="Assets\Graphics\PostEffectsBase.js" />
+     <Compile Include="Assets\Level2Teleport.js" />
+     <Compile Include="Assets\Menu\Main Menu.js" />
+     <Compile Include="Assets\Menu\Map Menu.js" />
      <Compile Include="Assets\Player\CharacterMotor.js" />
      <Compile Include="Assets\Player\FPSInputController.js" />
+     <Compile Include="Assets\Player\Pause.js" />
+     <Compile Include="Assets\Player\Tester.js" />
      <Compile Include="Assets\Player\healthScript.js" />
      <Compile Include="Assets\Player\playerHP.js" />
      <None Include="Assets\Graphics\Toon Shading\Shaders\Toony-Basic.shader" />

@@ -1,8 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Graphics\EdgeDetectEffectNormals.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Player\Tester.js">
     <Files>
-      <File FileName="Assets\Graphics\EdgeDetectEffectNormals.js" Line="15" Column="1" />
+      <File FileName="Assets\Player\Pause.js" Line="13" Column="21" />
+      <File FileName="Assets\Level2Teleport.js" Line="3" Column="48" />
+      <File FileName="Assets\Player\playerHP.js" Line="27" Column="3" />
+      <File FileName="Assets\Enemies\Win!.js" Line="3" Column="1" />
+      <File FileName="Assets\Player\healthScript.js" Line="21" Column="4" />
+      <File FileName="Assets\Player\Tester.js" Line="13" Column="71" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

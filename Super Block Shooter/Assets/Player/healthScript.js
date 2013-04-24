@@ -5,7 +5,7 @@ private var isPlayer = false;
 
 function Start () 
 {
-	if(gameObject.name == "Player")
+	if(this.gameObject.name == "Player")
 	{
 		isPlayer = true;
 	}
@@ -13,9 +13,13 @@ function Start ()
 
 function Update () 
 {
-	if(health <= 0)
-	{
-		Destroy(this.gameObject);
+	
+	if(gameObject.GetComponent(playerHP) == null)
+	{	
+		if(health <= 0)
+		{				
+			Destroy(this.gameObject);
+		}
 	}
 }
 

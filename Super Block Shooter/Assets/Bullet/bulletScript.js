@@ -7,35 +7,37 @@ var instanceBullet : GameObject;
 
 function Update()
 {
-	
-	if (Input.GetButtonDown("Fire1"))
+	if(Time.timeScale != 0)
 	{
-	
-		var newColor = Color(Random.Range(0.3, 1.0), 
-		 					 Random.Range(0.3, 1.0),
-		 					 Random.Range(0.3, 1.0));
-		 					 
-		var colAvg = (newColor.r + newColor.g + newColor.b) / 3; 					 
-		if(colAvg < 200)
+		if (Input.GetButtonDown("Fire1"))
 		{
-			newColor = getColor();
+		
+			var newColor = Color(Random.Range(0.3, 1.0), 
+			 					 Random.Range(0.3, 1.0),
+			 					 Random.Range(0.3, 1.0));
+			 					 
+			var colAvg = (newColor.r + newColor.g + newColor.b) / 3; 					 
+			if(colAvg < 200)
+			{
+				newColor = getColor();
+			}
+			 					 
+			upVec = Vector3(0,upwardForce,0);
+		
+			var directionVector = Camera.main.transform.forward;
+			
+			instanceBullet = Instantiate(prefabBullet, transform.position + directionVector*2, 
+			Quaternion.identity);
+			
+			instanceBullet.light.color = newColor;
+			
+			instanceBullet.renderer.material.color = newColor;
+			
+			instanceBullet.rigidbody.AddForce(directionVector * 
+			forwardForce + upVec);
+					
+			instanceBullet.particleSystem.startColor = instanceBullet.light.color;
 		}
-		 					 
-		upVec = Vector3(0,upwardForce,0);
-	
-		var directionVector = Camera.main.transform.forward;
-		
-		instanceBullet = Instantiate(prefabBullet, transform.position + directionVector*2, 
-		Quaternion.identity);
-		
-		instanceBullet.light.color = newColor;
-		
-		instanceBullet.renderer.material.color = newColor;
-		
-		instanceBullet.rigidbody.AddForce(directionVector * 
-		forwardForce + upVec);
-				
-		instanceBullet.particleSystem.startColor = instanceBullet.light.color;
 	}
 }
 

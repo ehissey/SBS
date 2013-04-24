@@ -12,7 +12,16 @@ function OnGUI()
 {
     if(OriginalOn == true)
     {
-    	Screen.showCursor = false;
-        GUI.DrawTexture(position, crosshairTexture);
+    	if(Time.timeScale != 0)
+    	{
+    		Screen.showCursor = false;
+    		GUI.DrawTexture(position, crosshairTexture);
+    	}
+    	else
+    	{
+    		Screen.showCursor = true;
+    	}
+    	
+        
     }
 }
