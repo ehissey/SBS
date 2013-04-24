@@ -5,6 +5,8 @@ var forwardForce = 1000;
 var upwardForce = 0;
 var instanceBullet : GameObject;
 
+var shootSound : AudioClip;
+
 function Update()
 {
 	if(Time.timeScale != 0)
@@ -17,10 +19,13 @@ function Update()
 			 					 Random.Range(0.3, 1.0));
 			 					 
 			var colAvg = (newColor.r + newColor.g + newColor.b) / 3; 					 
+			
 			if(colAvg < 200)
 			{
 				newColor = getColor();
 			}
+			
+			gameObject.audio.PlayOneShot(shootSound);
 			 					 
 			upVec = Vector3(0,upwardForce,0);
 		

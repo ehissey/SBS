@@ -2,6 +2,8 @@ var explRadius = 3.0;
 var explPower = 500.0;
 var prefabExpl : GameObject;
 var instanceExpl : GameObject;
+var explosionSound : AudioClip;
+
 
 
 function OnCollisionEnter(theCollision : Collision)
@@ -13,6 +15,10 @@ function OnCollisionEnter(theCollision : Collision)
     
     instanceExpl = Instantiate(prefabExpl, explPos, Quaternion.identity);
     instanceExpl.particleSystem.startColor = gameObject.renderer.material.color;
+    instanceExpl.AddComponent(AudioSource);
+    var aud = instanceExpl.GetComponent(AudioSource);
+    
+    aud.audio.PlayOneShot(explosionSound);
     
     for(var obj : Collider in colliders){
 		

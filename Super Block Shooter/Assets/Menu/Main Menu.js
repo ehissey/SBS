@@ -7,18 +7,13 @@ function theFirstMenu() {
 	if(started)
 	{
 		Time.timeScale = 0f;
-	    //layout start
-	    GUI.BeginGroup(Rect(Screen.width / 2 - 150, 50, 300, 200));
-	    
-	    //the menu background box
-	    GUI.Box(Rect(0, 0, 300, 200), "");
+	 
 	    
 	    //logo picture
-	    GUI.Label(Rect(15, 10, 300, 68), logoTexture);
+	    GUI.Label(Rect(Screen.width/2 - 225, Screen.height/2 - 400, 450, 250), logoTexture);
 	    
-	    ///////main menu buttons
-	    //game start button
-	    if(GUI.Button(Rect(55, 100, 180, 40), "Start game")) 
+	
+	    if(GUI.Button(Rect(Screen.width/2 - 120 , Screen.height/2 - 80, 240, 80), "Start game")) 
 	    {
 		    started = false;
 		    
@@ -30,12 +25,12 @@ function theFirstMenu() {
 	    
 	    }
 	    //quit button
-	    if(GUI.Button(Rect(55, 150, 180, 40), "Quit")) {
+	    if(GUI.Button(Rect(Screen.width/2 - 120 , Screen.height/2 + 40, 240, 80), "Quit")) {
 	    Application.Quit();
 	    }
 	    
 	    //layout end
-	    GUI.EndGroup(); 
+	    //GUI.EndGroup(); 
     }
 }
 
